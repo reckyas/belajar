@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>.:belajar buat navbar:.</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<style>
+		.con{width: 600px; margin: auto;}
+	</style>
+	<script>
+		var i = 0;
+		var txt = 'coba text ketik sendiri blalblablablablablabla !!!!!!!';
+		var spd = 100;
+		function tbg() {
+			if (i < txt.length) {
+				document.getElementById("demo").innerHTML = txt.charAt(i);
+				i++;
+				setTimeout(tbg, spd);
+			}
+		}
+	</script>
+</head>
+<body id="body">
+	<!-- navbar -->
+	<nav class="navbar navbar-default" id="nav">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand">COBA</a>
+			</div>
+		<div class="collapse navbar-collapse" id="bs">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">HOME <span class="sr-only">(current)</span></a></li>
+				<li><a href="#">PROFIL</a></li>
+				<li><a href="#">GALERY</a></li>
+				<li><a href="#">CONTACT</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">TUTORIAL <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">HTML</a></li>
+							<li><a href="#">CSS</a></li>
+							<li><a href="#">BOOTSTRAP</a></li>
+						</ul>
+				</li>
+			</ul>
+			<form class="navbar-form navbar-left" role="search">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="cari disini..">
+				</div>
+				<button type="submit" class="btn btn-default">Cari</button>
+			</form>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href=""><span class="glyphicon glyphicon-user"></span> Daftar</a></li>
+				<li><a href=""><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			</ul>
+		</div>
+	</div>
+		
+	</nav>
+
+	<!-- content -->
+	<div class="con">
+		<button onclick="tbg()">Jalankan</button>
+		<p id="demo">z</p>
+		<p id="demo">z</p>
+		<p id="demo">z</p>
+		<p id="demo">z</p>
+		<p id="demo">z</p>
+		<p id="demo">z</p>
+		<p id="demo">z</p>
+	</div>
+</body>
+</html>
